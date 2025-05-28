@@ -1,0 +1,12 @@
+#gjs {
+     border: none;
+     height: 100vh;
+     width: 100%;
+   }
+
+   body, html {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     overflow: hidden;
+   }
