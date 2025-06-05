@@ -1,0 +1,36 @@
+/* Card Styles */
+.project-card {
+  padding: 1px !important; /* Reduce padding inside the card */
+  font-size: 12px;
+  transition: all ease 300ms;
+ box-shadow: 0px 3px 4px 0px rgba(35, 44, 100, 0.3);
+}
+
+.project-card-cover {
+  height: 150px; /* Resize image */
+  object-fit: cover; /* Ensure the image scales correctly */
+}
+
+.project-card-title {
+  font-size: 18px;
+  margin-bottom: 4px; /* Reduce margin */
+}
+
+.project-card-category {
+  font-size: 14px;
+  margin-bottom: 4px; /* Reduce margin */
+}
+
+.project-card-link {
+  font-size: 14px;
+  color: rgb(35, 44, 100);
+  font-weight: 700;
+}
+
+/* Optional: Card hover styles */
+.project-card:hover {
+  /* transform: translateY(-2px); */
+  /* transform: scale(1.10); */
+  box-shadow: 0 4px 12px rgba(35, 44, 100, 0.3);
+
+}

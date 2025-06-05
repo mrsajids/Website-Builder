@@ -33,6 +33,7 @@ const DropdownMenu = () => {
       <div className="links">
         <a href="#" className="icon-logo">
           <img src="assets/images/logo/logo.svg" alt="" />
+          &nbsp;<span className="logo-header">Web Builder</span>
           {/* <span className="material-symbols-outlined">home_app_logo</span> */}
         </a>
 
