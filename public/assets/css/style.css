@@ -130,7 +130,7 @@ p {
   user-select: none;
   padding: 0 25px;
   font-size: 16px;
-  line-height: 48px;
+  line-height: 36px;
   border-radius: 8px;
   border: 0;
   color: #fff;
@@ -615,7 +615,7 @@ p {
 }
 
 .navbar-btn .main-btn {
-  line-height: 45px;
+  line-height: 36px;
   background: -webkit-gradient(
     linear,
     left top,
@@ -804,6 +804,7 @@ p {
   padding: 50px 30px;
   border: 2px solid transparent;
   border-radius: 8px;
+  max-height: 25rem;
 }
 
 @media (max-width: 767px) {
@@ -969,7 +970,7 @@ p {
   background-size: 200%;
   height: 50px;
   line-height: 50px;
-  padding: 0 35px;
+  padding: 2px 20px;
   margin-top: 40px;
 }
 
@@ -1083,6 +1084,10 @@ p {
     height: 120px;
   }
 }
+.counter-wrapper .single-counter:hover::before {
+  -webkit-transform: rotate(0deg); /* Rotate back to 0deg */
+  transform: rotate(0deg); /* Rotate back to 0deg */
+}
 
 .counter-wrapper .single-counter::before {
   position: absolute;
@@ -1095,6 +1100,8 @@ p {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   z-index: -1;
+  transition: transform 0.5s ease; /* Smooth transition */
+
 }
 
 @media (max-width: 767px) {
@@ -1357,7 +1364,7 @@ p {
 }
 
 .footer-about .logo img {
-  width: 160px;
+  width: 70px;
 }
 
 .footer-about .text {
@@ -2243,11 +2250,97 @@ p {
   color: #fff;
   background-position: right center;
 }
-
-.fade-in-animation {
-  animation: fadeIn .5s ease-in forwards;
+.main-btn-sm-p{
+      padding: 5px 12px !important;
+}
+.darkblue-main-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgb(35, 44, 100), rgb(70, 80, 150));
+  color: #fff;
+      padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.darkblue-main-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.darkblue-main-btn:hover::after {
+  left: 130%;
+}
+
+.darkblue-main-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+.darkblue-outline-btn {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: rgb(35, 44, 100); /* Set initial text color */
+  padding: 8px 12px;
+  border: 1.8px solid rgb(35, 44, 100);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.darkblue-outline-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(35, 44, 100, 0.15); /* subtle highlight using base color */
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+  pointer-events: none; /* prevents blocking hover */
+}
+
+.darkblue-outline-btn:hover::after {
+  left: 130%;
+}
+
+.darkblue-outline-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(35, 44, 100, 0.3);
+  color: rgb(35, 44, 100); /* Ensure the text color stays the same on hover */
+}
+
+
+.fade-in-animation {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+.fs-10 {
+  font-size: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.main-btn-padding {
+  padding: 0 10px;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -2258,7 +2351,7 @@ p {
 }
 
 .slide-down {
-  animation: slideDown .5s ease-out forwards;
+  animation: slideDown 0.3s ease-out forwards;
 }
 
 @keyframes slideDown {
